@@ -8,5 +8,9 @@ namespace CI_Platform_.net.Controllers
         {
             return View();
         }
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
     }
 }
