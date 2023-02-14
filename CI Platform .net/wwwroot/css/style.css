@@ -1,142 +1,201 @@
 /* Login Page */
 * {
-    font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+}
+html {
+  font-size: 16px;
+  color: #414141;
+}
+.carousel .carousel-title {
+  font-weight: 500;
+  color: #ffffff;
+  text-align: left;
+  font-size: 43px;
+  max-width: 592px;
+}
+.carousel .carousel-content {
+  text-align: left;
+  color: #ffffff;
+}
+.login-form {
+  max-width: 402px;
+  margin: auto;
+}
+.text-control {
+  margin-top: 8px;
+  height: 56px;
+}
+.text-control:focus {
+  box-shadow: 0px 0px 10px #2b64b11f;
+  border: 1px solid #2b64b1;
+}
+.login-form .login-btn {
+  font-size: 17px;
+  border-radius: 24px;
+  height: 48px;
+  margin-top: 30px;
+  outline: none;
+}
+.lost-pass {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 17px;
+}
+.have-acc {
+  margin-top: 15.5px;
+  text-align: center;
+  font-size: 14px;
+}
+.have-acc a{
+  text-decoration: none;
+}
+.privacy-policy {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+  top: 227px;
+  /* bottom: 27px; */
+}
+.privacy-policy a {
+  color: #414141;
+  text-decoration: none;
+}
+
+/* Lost Password Page */
+.lost-pass-form {
+  max-width: 402px;
+  margin: auto;
+}
+
+.lost-pass-form .forgot-txt {
+  font-size: 22px;
+}
+.lost-pass-form .forgot-content {
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+.lost-pass-form .reset-btn {
+  font-size: 17px;
+  border-radius: 24px;
+  height: 48px;
+  margin-top: 30px;
+}
+.login-link {
+  font-size: 14px;
+  margin-top: 17px;
+}
+.login-link a {
+  color: #414141;
+  text-decoration: none;
+}
+
+/* Registration Page */
+.registration-form {
+  max-width: 417px;
+  margin: auto;
+}
+.registration-form .register-btn {
+  font-size: 17px;
+  border-radius: 24px;
+  height: 48px;
+  margin-top: 30px;
+}
+
+/* Reset Password Page */
+.reset-form {
+  max-width: 402px;
+  margin: auto;
+}
+
+.reset-form .new-pass-txt {
+  font-size: 22px;
+}
+.reset-form .new-pass-content {
+  font-size: 14px;
+  margin-bottom: 31px;
+}
+.reset-form .change-pass-btn
+{
+  font-size: 17px;
+  border-radius: 24px;
+  height: 48px;
+  margin-top: 30px;
+  outline: none;
+}
+
+/* Media-Query */
+@media screen and (min-width: 1401px) and (max-width: 1600px) {
+  .privacy-policy {
+    top: 100px;
   }
-  .main-container {
-    width: 100%;
-    max-width: 1920px;
-    display: flex;
-    height: 100vh;
-    justify-content: space-evenly;
-    align-items: center;
+}
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  /* Login Page */
+  .privacy-policy {
+    top: 80px;
   }
-  .carousel {
-    width: 70%;
-    /* width: 1344px; */
-    height: 100%;
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  /* Login Page */
+  .privacy-policy {
+    top: 50px;
   }
-  .carousel .carousel-title {
-    font-weight: 400;
-    text-align: left;
-    font-size: 43px;
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  /* Login Page */
+  .privacy-policy {
+    top: 50px;
   }
-  .carousel .carousel-content {
-    font-size: 16px;
-    font-weight: 100;
-    text-align: left;
-  }
-  #carousel-login {
-    width: 100%;
-  }
-  .login-box {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-self: flex-end;
-  }
-  .login-box .login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .login-box .login-form .input-title {
-    color: #414141;
-    font-size: 16px;
-  }
-  .login-box .login-form input {
-    margin-top: 8px;
-    color: #414141;
-    font-size: 16px;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    box-shadow: 0.97px 0.26px 3px #0000000d;
-    width: 401px;
-    height: 56px;
-    outline: none;
-  }
-  .login-box .login-form input:focus {
-    box-shadow: 0px 0px 10px #2b64b11f;
-    border: 2px solid #2b64b1;
-  }
-  .login-box .login-form .login-btn {
-    width: 401px;
-    font-size: 17px;
-    color: #f88634;
-    border: 2px solid #f88634;
-    border-radius: 24px;
-    height: 48px;
+  .login-form {
     margin-top: 30px;
-    background-color: #ffffff;
-    font-weight: 300;
+    max-width: 90%;
   }
-  .login-box .login-form .que-line {
-    font-size: 14px;
-    color: #414141;
-    align-self: center;
-    margin-top: 17px;
+  .lost-pass-form {
+    margin-top: 30px;
+    max-width: 90%;
   }
-  
-  /* Lost-Password Page */
-  .lost-pass-box {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-self: flex-end;
+  .reset-form {
+    margin-top: 30px;
+    max-width: 90%;
   }
-  .lost-pass-box .lost-pass-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  /* Login Page */
+  .privacy-policy {
+    top: 50px;
   }
-  .lost-pass-box .lost-pass-form .forgot-text{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-bottom: 32px;
+  .login-form {
+    margin-top: 30px;
+    max-width: 90%;
   }
-  .lost-pass-box .lost-pass-form input {
-    margin-top: 8px;
-    color: #414141;
-    font-size: 16px;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    box-shadow: 0.97px 0.26px 3px #0000000d;
-    width: 401px;
-    height: 56px;
-    outline: none;
+  .lost-pass-form {
+    margin-top: 30px;
+    max-width: 90%;
   }
-  .lost-pass-box .lost-pass-form input:focus {
-    box-shadow: 0px 0px 10px #2b64b11f;
-    border: 2px solid #2b64b1;
+  .reset-form {
+    margin-top: 30px;
+    max-width: 90%;
   }
-  
-  .lost-pass-box .lost-pass-form .forgot-txt{
-      font-size: 22px;
-      color: #414141;
-      align-self: center;
+}
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  /* Login Page */
+  .privacy-policy {
+    top: 50px;
   }
-  .lost-pass-box .lost-pass-form .forgot-content
-  {
-      font-size: 14px;
-      color: #414141;
-      text-align: center;
-      width: 390px;
+  .login-form {
+    margin-top: 30px;
+    max-width: 90%;
   }
-  .lost-pass-box .lost-pass-form .reset-btn {
-      width: 401px;
-      font-size: 17px;
-      color: #f88634;
-      border: 2px solid #f88634;
-      border-radius: 24px;
-      height: 48px;
-      margin-top: 30px;
-      background-color: #ffffff;
-      font-weight: 300;
-    }
-    .lost-pass-box .lost-pass-form .login-link
-    {
-      font-size: 14px;
-      color: #414141;
-      align-self: center;
-      margin-top: 17px;
-    }
+  .lost-pass-form {
+    margin-top: 30px;
+    max-width: 90%;
+  }
+  .reset-form {
+    margin-top: 30px;
+    max-width: 90%;
+  }
+}
+
+.mgt-21 {
+  margin-top: 21px;
+}
