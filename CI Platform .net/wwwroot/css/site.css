@@ -1,18 +1,345 @@
-html {
-  font-size: 14px;
+/* Login Page */
+* {
+    font-family: "Noto Sans", sans-serif;
+    border: none;
+    outline: none;
+    background: transparent;
 }
 
-@media (min-width: 768px) {
-  html {
+html {
     font-size: 16px;
-  }
+    color: #414141;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.carousel .carousel-title {
+    font-weight: 500;
+    color: #ffffff;
+    text-align: left;
+    font-size: 43px;
+    max-width: 592px;
 }
 
-body {
-  margin-bottom: 60px;
+.carousel .carousel-content {
+    text-align: left;
+    color: #ffffff;
+}
+
+.login-form {
+    max-width: 402px;
+    margin: auto;
+}
+
+.text-control {
+    margin-top: 8px;
+    height: 56px;
+}
+
+    .text-control:focus {
+        box-shadow: 0px 0px 10px #2b64b11f;
+        border: 1px solid #2b64b1;
+    }
+
+.login-form .login-btn {
+    font-size: 17px;
+    border-radius: 24px;
+    height: 48px;
+    margin-top: 30px;
+    outline: none;
+}
+
+.lost-pass {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 17px;
+}
+
+.have-acc {
+    margin-top: 15.5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+    .have-acc a {
+        text-decoration: none;
+    }
+
+.privacy-policy {
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    top: 227px;
+    /* bottom: 27px; */
+}
+
+    .privacy-policy a {
+        color: #414141;
+        text-decoration: none;
+    }
+
+/* Lost-Password */
+.lost-pass-form {
+    max-width: 402px;
+    margin: auto;
+}
+
+    .lost-pass-form .forgot-txt {
+        font-size: 22px;
+    }
+
+    .lost-pass-form .forgot-content {
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+
+    .lost-pass-form .reset-btn {
+        font-size: 17px;
+        border-radius: 24px;
+        height: 48px;
+        margin-top: 30px;
+    }
+
+.login-link {
+    font-size: 14px;
+    margin-top: 17px;
+}
+
+    .login-link a {
+        color: #414141;
+        text-decoration: none;
+    }
+
+/* Registration Page */
+.registration-form {
+    max-width: 417px;
+    margin: auto;
+}
+
+    .registration-form .register-btn {
+        font-size: 17px;
+        border-radius: 24px;
+        height: 48px;
+        margin-top: 30px;
+    }
+
+/* Reset-Password */
+.reset-form {
+    max-width: 402px;
+    margin: auto;
+}
+
+    .reset-form .new-pass-txt {
+        font-size: 22px;
+    }
+
+    .reset-form .new-pass-content {
+        font-size: 14px;
+        margin-bottom: 31px;
+    }
+
+    .reset-form .change-pass-btn {
+        font-size: 17px;
+        border-radius: 24px;
+        height: 48px;
+        margin-top: 30px;
+        outline: none;
+    }
+
+/* Media-Query */
+@media screen and (min-width: 1401px) and (max-width: 1600px) {
+    .privacy-policy {
+        top: 100px;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+    /* log-in page */
+    .privacy-policy {
+        top: 80px;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    /* log-in page */
+    .privacy-policy {
+        top: 50px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* log-in page */
+    .privacy-policy {
+        top: 50px;
+    }
+
+    .login-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .lost-pass-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .reset-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    /* log-in page */
+    .privacy-policy {
+        top: 50px;
+    }
+
+    .login-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .lost-pass-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .reset-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+    /* log-in page */
+    .privacy-policy {
+        top: 50px;
+    }
+
+    .login-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .lost-pass-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .reset-form {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+}
+
+.mgt-21 {
+    margin-top: 21px;
+}
+
+/*Platform Landing Page*/
+.profile-img {
+    height: 40px;
+    width: 40px;
+}
+
+.profile-text {
+    color: #333333;
+    font-size: 15px;
+}
+
+.header-height {
+    height: 72px;
+    border: 1px solid #E8E8E8;
+}
+
+    .header-height .nav-item {
+        color: #757575;
+        width: 100px;
+    }
+
+.line {
+    border-top: 3px solid #E8E8E8;
+}
+
+.subheader {
+    height: 78px;
+    max-width: 1442px;
+    margin: auto;
+}
+
+.controls {
+    color: #757575;
+}
+
+.searchbox {
+    position: absolute;
+    background: none;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+    .searchbox:focus ~ img {
+        display: none;
+    }
+
+    .searchbox:focus {
+        padding-left: 0;
+    }
+
+.content-width {
+    max-width: 1442px;
+    margin: auto;
+}
+
+.custom-badge {
+    color: #414141;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.sort-select {
+    width: 171px;
+}
+
+.btn-group {
+    margin-left: 40px;
+}
+
+.fs-fourteen {
+    font-size: 14px
+}
+
+.theme {
+    margin-top: -15px;
+}
+
+.dark-gray {
+    color: #414141;
+}
+
+.light-gray {
+    color: #757575;
+}
+
+.date {
+    font-size: 15px;
+}
+
+.bg-orange-color {
+    background-color: #f88634;
+}
+/*#apply-btn:hover img {
+    background-image: url("/images/");
+}*/
+
+.applied-tag {
+    margin-left: -17px
+}
+
+.view:hover {
+    background-color: #E8E8E8;
+}
+
+.canvas {
+    transform: none;
 }

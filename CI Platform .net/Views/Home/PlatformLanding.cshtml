@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Platform Landing Page";
+}
+
+<partial name="_Header" />
+
+<partial name="_SearchHeader" />
+<div class="content-width d-flex justify-content-between" style="margin-top:35px">
+    <div>
+        <span class="fs-4">Explore</span>
+        <span class="fs-3 fw-bold">72 missions</span>
+    </div>
+    <div class="d-flex">
+        <select class="form-select sort-select">
+            <option>Sort by</option>
+        </select>
+        <div class="btn-group">
+            <button id="grid" class="view rounded-circle">
+                <img src="~/images/grid.png" />
+            </button>
+            <button id="list" class="view rounded-circle">
+                <img src="~/images/list.png" />
+            </button>
+        </div>
+    </div>
+</div>
+@*<partial name="_GridCard"/>*@
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+<div id="partialView">  
+</div>  
+<script type="text/javascript">  
+    $(document).ready(function() {  
+        $("#partialView").load('/home/GetNoMission');  
+    });  
+     $('#list').click(function() {  
+        $("#partialView").load('/home/GetListView');  
+    });
+     $('#grid').click(function() {  
+        $("#partialView").load('/home/GetGridView');  
+    });
+</script> 

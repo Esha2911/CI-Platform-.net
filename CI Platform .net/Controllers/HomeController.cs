@@ -13,12 +13,21 @@ namespace CI_Platform_.net.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult LostPassword()
+        {
+            return View();
+        }
+
+        public IActionResult Registration()
+        {
+            return View();
+        }
+        public IActionResult ResetPassword()
         {
             return View();
         }
@@ -27,6 +36,22 @@ namespace CI_Platform_.net.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult PlatformLanding()
+        {
+            return View();
+        }
+        public PartialViewResult GetGridView()
+        {
+            return PartialView("_GridCard");
+        }
+        public PartialViewResult GetListView()
+        {
+            return PartialView("_ListCard");
+        }
+        public PartialViewResult GetNoMission()
+        {
+            return PartialView("_NoMissionFound");
         }
     }
 }

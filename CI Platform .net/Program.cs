@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=UserPages}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=PlatformLanding}/{id?}");
 
 app.Run();

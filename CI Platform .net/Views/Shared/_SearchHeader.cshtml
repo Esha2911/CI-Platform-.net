@@ -1,0 +1,135 @@
+﻿<div class="container-fluid">
+    <div class="subheader d-flex justify-content-between">
+        <div class="w-50 d-flex align-items-center">
+            <div class=" d-flex align-items-center">
+                <input type="text" placeholder="Search Mission..." class="searchbox" id="search" />
+                <img src="images/search.png" />
+            </div>
+        </div>
+        @*        <div class="w-50 d-flex justify-content-end">
+        *@            <button class="btn d-lg-none align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+            <img src="~/images/filter.png" />
+        </button>
+        <div class="offcanvas-lg offcanvas-end canvas w-50 " tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+            <div class="offcanvas-header">
+                <button type="button" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive">
+                    <img src="~/images/arrow.png" />
+                </button>
+                <button type="button" data-bs-target="#offcanvasResponsive">
+                    Clear All
+                </button>
+            </div>
+            <div class="offcanvas-body">
+
+                <div class="dropdown-center w-100">
+                    <button class="border rounded-0 btn d-flex justify-content-between align-items-center w-100" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="min-height:79px">
+                        Country
+                        <img src="~/images/drop-down.png" />
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="India" />
+                            <label>India</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="France" />
+                            <label>France</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Pakistan" />
+                            <label>Pakistan</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-center w-100">
+                    <button class="border rounded-0 btn d-flex justify-content-between align-items-center w-100" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="min-height:79px">
+                        City
+                        <img src="~/images/drop-down.png" />
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Toronto" />
+                            <label>Toronto</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Jaipur" />
+                            <label>Jaipur</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Atlanta" />
+                            <label>Atlanta</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-center w-100">
+                    <button class="border rounded-0 btn d-flex justify-content-between align-items-center w-100" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="min-height:79px">
+                        Theme
+                        <img src="~/images/drop-down.png" />
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Environment" />
+                            <label>Environment</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Education" />
+                            <label>Education</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Nutrition" />
+                            <label>Nutrition</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-center w-100">
+                    <button class="border rounded-0 btn d-flex justify-content-between align-items-center w-100" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" style="min-height:79px">
+                        Skills
+                        <img src="~/images/drop-down.png" />
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Teaching English" />
+                            <label>Teaching English</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Botany"/>
+                            <label>Botany</label>
+                        </li>
+                        <li class="dropdown-item">
+                            <input type="checkbox" onchange='handleChange(this);' value="Dance" />
+                            <label>Dance</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*</div>*@
+<div class="container-fluid line">
+    <div class="content-width d-flex flex-wrap" style="margin-top: 18px;">
+        <div class="d-flex flex-wrap" id="filter">
+        </div>
+        <button class="rounded border p-1 ps-2 pe-2 custom-badge rounded-pill" onclick="clearAll()">Clear All</button>
+    </div>
+</div>
+<script>
+        function handleChange(checkbox) {
+        if(checkbox.checked == true){
+            let filter = document.getElementById("filter");
+            filter.innerHTML= filter.innerHTML+`<div class="rounded border p-1 ps-2 custom-badge rounded-pill" id="`+checkbox.value+`">`+checkbox.value+`<img src="images/cancel.png" class="p-1 " /></div>`;
+        }else{
+            let badge = document.getElementById(checkbox.value);
+            badge.remove();
+       }
+    }
+    function clearAll(){
+        let filter = document.getElementById("filter");
+        document.querySelectorAll('input[type="checkbox"]')
+        .forEach(el => el.checked = false);
+        filter.innerHTML="";
+    }
+</script>
