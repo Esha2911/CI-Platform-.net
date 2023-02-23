@@ -41,6 +41,10 @@ namespace CI_Platform_.net.Controllers
         {
             return View();
         }
+        public IActionResult VolunteeringMission()
+        {
+            return View();
+        }
         public PartialViewResult GetGridView()
         {
             return PartialView("_GridCard");

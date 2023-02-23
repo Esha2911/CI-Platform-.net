@@ -343,3 +343,75 @@ html {
 .canvas {
     transform: none;
 }
+
+.mission-filter-box {
+    min-height: 130px;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
+#recommend-btn:hover img {
+    content: url("../images/user.png");
+}
+
+#addtofav:hover img {
+    content: url("../images/heart.png");
+}
+
+
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+}
+
+    .rating > input {
+        display: none
+    }
+
+    .rating > label {
+        position: relative;
+        width: 1em;
+        font-size: 30px;
+        font-weight: 300;
+        color: #757575;
+        cursor: pointer
+    }
+
+        .rating > label::before {
+            content: "\2605";
+            position: absolute;
+            opacity: 0
+        }
+
+        .rating > label:hover:before,
+        .rating > label:hover ~ label:before {
+            opacity: 1 !important
+        }
+
+    .rating > input:checked ~ label:before {
+        opacity: 1
+    }
+
+    .rating:hover > input:checked ~ label:before {
+        opacity: 0.4
+    }
+
+.last-con {
+    border: 1px solid #E8E8E8;
+    border-radius: 3px;
+}
+
+    .last-con img {
+        width: 18px;
+        height: 24px;
+    }
+
+.anyClass {
+    height: 550px;
+    overflow-y: scroll;
+}
