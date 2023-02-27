@@ -6,16 +6,51 @@ namespace CI_Platform_.net.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly CiContext _context;
+
+        public HomeController(CiContext context)
         {
-            _logger = logger;
+            _context = context;
         }
+       
 
-        public IActionResult Login()
+
+            public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(User user)
+        {
+
+
+            if (user.Email == null || user.Password == null)
+            {
+                return View();
+            }
+            var data = _context.Users.Where(d => d.Email == user.Email && d.Password == user.Password).FirstOrDefault();
+
+            if (data != null)
+            {
+                return RedirectToAction("PlatformLanding", "Home");
+            }
+
+            else
+            {
+                ViewBag.ErrorMessage = "Failed";
+                return View();
+            }
+
+            //if (result)
+            //{ 
+
+
+            //    return RedirectToAction(nameof(Header)); }
+            //else { return NotFound(); }
+
         }
 
         public IActionResult LostPassword()
